@@ -177,7 +177,7 @@ def my_echart():
         q = upname(q)
         conn = pymysql.connect(host='34.72.183.186',user='root',password='mm0389798',db='stock_analysis')
         cur = conn.cursor()
-        sql = 'SELECT Symbol, Date, High, Low, Open, Close, Volume FROM stock_info where Symbol="' +q+ '" AND Date BETWEEN "2022-01-05" AND "2022-07-13"'
+        sql = 'SELECT Symbol, Date, High, Low, Open, Close, Volume FROM stock_info where Symbol="' + q 
         print(sql)
         cur.execute(sql)
         u = cur.fetchall()
@@ -242,7 +242,7 @@ def my_echart():
     else:
         conn = pymysql.connect(host='34.72.183.186',user='root',password='mm0389798',db='stock_analysis')
         cur = conn.cursor()
-        sql = 'SELECT Symbol, Date, High, Low, Open, Close, Volume FROM stock_info where Symbol="2330.tw" AND Date BETWEEN "2022-01-05" AND "2022-07-13"' 
+        sql = 'SELECT Symbol, Date, High, Low, Open, Close, Volume FROM stock_info where Symbol="2330.tw"' 
         cur.execute(sql)
         u = cur.fetchall()
         # print(u)
@@ -283,7 +283,7 @@ def my_MACD():
         q = upname(q)
         conn = pymysql.connect(host='34.72.183.186',user='root',password='mm0389798',db='stock_analysis')
         cur = conn.cursor()
-        sql = 'SELECT Symbol, Date, MACD, MACDsignal, MACDhist FROM stock_info where Symbol="'+q+'" AND Date BETWEEN "2022-01-05" AND "2022-07-13"'
+        sql = 'SELECT Symbol, Date, MACD, MACDsignal, MACDhist FROM stock_info where Symbol="'+ q 
         print(sql)
         cur.execute(sql)
         u = cur.fetchall()
@@ -312,7 +312,7 @@ def my_MACD():
     else:
         conn = pymysql.connect(host='34.72.183.186',user='root',password='mm0389798',db='stock_analysis')
         cur = conn.cursor()
-        sql = 'SELECT Symbol, Date, MACD, MACDsignal, MACDhist FROM stock_info where Symbol="2330.tw" AND Date BETWEEN "2022-01-05" AND "2022-07-13"' 
+        sql = 'SELECT Symbol, Date, MACD, MACDsignal, MACDhist FROM stock_info where Symbol="2330.tw"' 
         cur.execute(sql)
         u = cur.fetchall()
         # print(u)
@@ -350,7 +350,7 @@ def my_Change_MK():
         q = upname(q)
         conn = pymysql.connect(host='34.72.183.186',user='root',password='mm0389798',db='stock_analysis')
         cur = conn.cursor()
-        sql = 'SELECT Symbol, Date, Change_MK FROM stock_info where Symbol="'+q+'" AND Date BETWEEN "2020-05-13" AND "2022-07-12"'
+        sql = 'SELECT Symbol, Date, Change_MK FROM stock_info where Symbol="'+ q
         print(sql)
         cur.execute(sql)
         u = cur.fetchall()
@@ -377,7 +377,7 @@ def my_Change_MK():
     else:
         conn = pymysql.connect(host='34.72.183.186',user='root',password='mm0389798',db='stock_analysis')
         cur = conn.cursor()
-        sql = 'SELECT Symbol, Date, Change_MK FROM stock_info where Symbol="2330.tw" AND Date BETWEEN "2020-05-13" AND "2022-07-12"' 
+        sql = 'SELECT Symbol, Date, Change_MK FROM stock_info where Symbol="2330.tw"' 
         cur.execute(sql)
         u = cur.fetchall()
 
@@ -412,7 +412,7 @@ def my_BBAND():
         q = upname(q)
         conn = pymysql.connect(host='34.72.183.186',user='root',password='mm0389798',db='stock_analysis')
         cur = conn.cursor()
-        sql = 'SELECT Symbol, Date, High, Low, Open, Close, Volume, upper, middle, lower FROM stock_info where Symbol="'+q+'" AND Date BETWEEN "2022-01-05" AND "2022-07-13"'
+        sql = 'SELECT Symbol, Date, High, Low, Open, Close, Volume, upper, middle, lower FROM stock_info where Symbol="'+ q
         print(sql)
         cur.execute(sql)
         u = cur.fetchall()
@@ -446,7 +446,7 @@ def my_BBAND():
     else:
         conn = pymysql.connect(host='34.72.183.186',user='root',password='mm0389798',db='stock_analysis')
         cur = conn.cursor()
-        sql = 'SELECT Symbol, Date, High, Low, Open, Close, Volume, upper, middle, lower FROM stock_info where Symbol="2330.tw" AND Date BETWEEN "2022-01-05" AND "2022-07-13"' 
+        sql = 'SELECT Symbol, Date, High, Low, Open, Close, Volume, upper, middle, lower FROM stock_info where Symbol="2330.tw"' 
         cur.execute(sql)
         u = cur.fetchall()
 
@@ -488,7 +488,7 @@ def my_KDJ():
         q = upname(q)
         conn = pymysql.connect(host='34.72.183.186',user='root',password='mm0389798',db='stock_analysis')
         cur = conn.cursor()
-        sql = 'SELECT Symbol, Date, SLOWK, SLOWD, SLOWJ FROM stock_info where Symbol="'+q+'" AND Date BETWEEN "2022-03-01" AND "2022-07-12"'
+        sql = 'SELECT Symbol, Date, SLOWK, SLOWD, SLOWJ FROM stock_info where Symbol="'+ q
         print(sql)
         cur.execute(sql)
         u = cur.fetchall()
@@ -517,7 +517,7 @@ def my_KDJ():
     else:
         conn = pymysql.connect(host='34.72.183.186',user='root',password='mm0389798',db='stock_analysis')
         cur = conn.cursor()
-        sql = 'SELECT Symbol, Date, SLOWK, SLOWD, SLOWJ FROM stock_info where Symbol="2330.tw" AND Date BETWEEN "2022-03-01" AND "2022-07-12"' 
+        sql = 'SELECT Symbol, Date, SLOWK, SLOWD, SLOWJ FROM stock_info where Symbol="2330.tw"' 
         cur.execute(sql)
         u = cur.fetchall()
         # print(u)
@@ -555,7 +555,7 @@ def my_OBV():
         q = upname(q)
         conn = pymysql.connect(host='34.72.183.186',user='root',password='mm0389798',db='stock_analysis')
         cur = conn.cursor()
-        sql = 'SELECT Symbol, Date, OBV FROM stock_info where Symbol="'+q+'" AND Date BETWEEN "2020-05-13" AND "2022-07-12"'
+        sql = 'SELECT Symbol, Date, OBV FROM stock_info where Symbol="'+ q
         print(sql)
         cur.execute(sql)
         u = cur.fetchall()
@@ -582,7 +582,7 @@ def my_OBV():
     else:
         conn = pymysql.connect(host='34.72.183.186',user='root',password='mm0389798',db='stock_analysis')
         cur = conn.cursor()
-        sql = 'SELECT Symbol, Date, OBV FROM stock_info where Symbol="2330.tw" AND Date BETWEEN "2020-05-13" AND "2022-07-12"' 
+        sql = 'SELECT Symbol, Date, OBV FROM stock_info where Symbol="2330.tw"' 
         cur.execute(sql)
         u = cur.fetchall()
 
@@ -617,7 +617,7 @@ def my_RSI():
         q = upname(q)
         conn = pymysql.connect(host='34.72.183.186',user='root',password='mm0389798',db='stock_analysis')
         cur = conn.cursor()
-        sql = 'SELECT Symbol, Date, RSI9, RSI14, RSI25 FROM stock_info where Symbol="'+q+'" AND Date BETWEEN "2022-03-01" AND "2022-07-12"'
+        sql = 'SELECT Symbol, Date, RSI9, RSI14, RSI25 FROM stock_info where Symbol="'+ q
         # print(sql)
         cur.execute(sql)
         u = cur.fetchall()
@@ -646,7 +646,7 @@ def my_RSI():
     else:
         conn = pymysql.connect(host='34.72.183.186',user='root',password='mm0389798',db='stock_analysis')
         cur = conn.cursor()
-        sql = 'SELECT Symbol, Date, RSI9, RSI14, RSI25 FROM stock_info where Symbol="2330.tw" AND Date BETWEEN "2022-03-01" AND "2022-07-12"' 
+        sql = 'SELECT Symbol, Date, RSI9, RSI14, RSI25 FROM stock_info where Symbol="2330.tw"' 
         cur.execute(sql)
         u = cur.fetchall()
         # print(u)
